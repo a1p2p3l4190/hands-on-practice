@@ -1,0 +1,30 @@
+.userInfo :hover {
+    cursor: pointer;
+}
+
+img {
+    margin: 10px;
+    border-radius: 5px;
+    height: 200px;
+    width: auto;
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+td {
+    width: 200px;
+    text-align: left;
+    font-weight:500;
+}
+
+table {
+    border-collapse: collapse;
+    display: block;
+}
+
+tr.userInfo {
+    border-radius: 5px;
+    border: 1px solid black;
+}

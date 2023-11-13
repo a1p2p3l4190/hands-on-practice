@@ -1,0 +1,20 @@
+<body>
+    <app-list [userList]="userList" (isModifying)="modifying($event)"></app-list>
+    <button (click)="startAdding()" class="add-btn">{{this.isAdding==false?"Add":"Close"}}</button>
+    <p class="modify-word" *ngIf="this.isModifying==true">You are modifying #{{this.modifyIndex+1}}</p>
+    <form [formGroup]="form" *ngIf="this.isAdding==true||this.isModifying==true">
+        <p>Username</p>
+        <input type="text" formControlName="username">
+        <p>Age(Years)</p>
+        <input type="number" formControlName="age" placeholder="Please fill in with number">
+        <p>Photo</p>
+        <img *ngIf="this.selectedFile!==undefined" src={{this.selectedFile}}>
+        <br>
+        <input type="file" formControlName="photo" name="photo" (change)="onPhotoChange($event)">
+        <br>
+        <button (click)="add()">Add User</button>
+        <button *ngIf="this.isModifying==true" (click)="modify()">Update User</button>
+        <button *ngIf="this.isModifying==true" (click)="delete()">Delete User</button>
+        <button *ngIf="this.userList.length!=0" (click)="export()">Export UserList</button>
+    </form>
+</body>

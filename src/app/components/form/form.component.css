@@ -1,0 +1,36 @@
+p {
+    font-weight: bold;
+}
+
+input {
+    width: 300px;
+}
+
+button {
+    margin-top: 20px;
+    height: 30px;
+    width: 120px;
+    margin: 10px;
+    background-color: rgb(78, 12, 89);
+    color: white;
+}
+
+body {
+    margin-left: 10px;
+}
+
+img {
+    height: 200px;
+    width: auto;
+    border-radius: 5px;
+}
+
+.add-btn {
+    color: white;
+    background-color: rgb(68, 114, 197);
+    width: 60px;
+}
+
+.modify-word {
+    color: brown;
+}
